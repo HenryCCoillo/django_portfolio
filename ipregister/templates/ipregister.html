@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Registro de IP{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-3">
+        <h2>Lista de Proyectos</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Ip</th>
+                    <th>Fecha de Visita</th>
+                </tr>
+            </thead>
+        
+            <tbody>            
+
+                {% for ip in list_ip %}
+                <tr>
+                    <td>{{ip.user}}</td>
+                    <td>{{ip.ip}}</td>
+                    <td>{{ip.ip_register}}</td>
+                   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
